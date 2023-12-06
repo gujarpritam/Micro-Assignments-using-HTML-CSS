@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts Using Grid</title>
+    <style>
+        .container {
+            display: grid;
+            gap: 1rem;
+            grid-template-areas:
+                'nav sect'
+                'sect aside';
+        }
+
+        .item {
+            background-color: gray;
+            border: 2px solid black;
+            margin: 0px;
+        }
+
+        #navbar {
+            grid-area: sect;
+        }
+
+        #section {
+            grid-area: nav;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar" class="item">navbar</div>
+        <div id="section" class="item">section. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit
+            neque at, corporis quibusdam necessitatibus ipsum nisi nesciunt dicta nulla aut labore omnis, adipisci modi
+            eius consequuntur alias ut expedita laboriosam vel nam fugiat!</div>
+        <div id="aside" class="item">aside. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate velit
+            voluptatem ullam temporibus perspiciatis ratione in officiis perferendis tenetur aperiam!</div>
+    </div>
+</body>
+
+</html>

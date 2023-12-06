@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            height: 200vh;
+            width: 200vw;
+            /* display: flex; */
+            /* margin-top: 0; */
+        }
+
+        .container {
+            border: 2px solid red;
+            height: 1000px;
+            width: 600px;
+            background-color: bisque;
+            justify-content: center;
+            margin-top: 800px;
+            /* position: static;
+            top: 0px; */
+        }
+
+        #box3 {
+            /* absolute pos takes position wrt relative parent element. If there is not a single relative parent, it will take html/root as parent(here in this case it is the visible window screen) */
+            position: sticky;
+            left: 10px;
+            top: 400px;
+        /* right: 10px; */
+            /* height:10px; */
+/* width:100%; */
+
+            /* relative pos takes position wrt same element(here in this case it is the same elememt) */
+            /* position: relative;
+            top: 100px;
+            left: 200px; */
+
+            /* fixed: it fixes its position to the same place(no matter if we scroll horizontal or vertical)position relative to browser window(root) */
+            /* position: fixed;
+            right: 20px;
+            top: 30px; */
+
+            /* it sticks the element to the same position as we scroll wrt to its parent element(its parent is container in this case) */
+            /* position: sticky;
+            top: 300px; */
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            display: inline-block;
+        }
+
+
+        /* #box3-1 {
+            position
+            : absolute;
+            right: 0px;
+            top: 200px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3
+            <!-- <div class="box" id="box3-1">3.1
+                <div class="box" id="box3-1-1">3.1.1</div>
+            </div> -->
+        </div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+
+</html>

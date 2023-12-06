@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes and Animation</title>
+<style>
+    .container{
+        display: flex;
+        border: 2px solid red;
+    }
+    .box{
+        background-color: green;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+        animation-name: rotation;
+        animation-duration: 4s;
+animation-iteration-count: 3;
+position: relative;
+/* animation-direction: reverse; */
+/* animation-delay: 1s;
+animation-fill-mode: alternate; */
+    }
+@keyframes rotation{
+    0%{
+        top:0px;
+        left:0px;
+    }
+    25%{
+        top:250px;
+        left:0px;
+    }
+    50%{
+        top:250px;
+        left:250px;
+    }
+    100%{
+        top:0px;
+        left:250px;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">box 1</div>
+        <!-- <div class="box" id="box2">box 2</div>
+        <div class="box" id="box3">box 3</div>
+        <div class="box" id="box4">box 4</div> -->
+    </div>
+</body>       
+</html>

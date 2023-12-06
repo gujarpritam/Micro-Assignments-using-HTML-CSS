@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid + Media Queries</title>
+    <style>
+        .container {
+            display: grid;
+            gap: 1rem;
+            grid-template-areas:
+                'nav nav nav nav'
+                'sect sect sect aside'
+                'footer footer footer footer';
+        }
+
+        .item {
+            background-color: gray;
+            border: 2px solid black;
+            margin: 0px;
+            padding: 14px;
+        }
+
+        #navbar {
+            grid-area: nav;
+        }
+
+        #section {
+            grid-area: sect;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        #footer {
+            grid-area: footer;
+        }
+
+        @media only screen and (max-width: 500px) {
+            body {
+                background-color: aqua;
+                display: block;
+
+                .container {
+                    display: grid;
+                    gap: 1rem;
+                    grid-template-areas:
+                        'nav nav nav nav'
+                        'sect sect sect sect'
+                        'aside aside aside aside'
+                        'footer footer footer footer';
+                }
+                #footer{
+                    text-align: center;
+                }
+            }
+        }
+
+        @media (min-width: 500px) and (max-width: 700px) {
+            body {
+                background-color: yellow;
+                display: block;
+            }
+        }
+
+        @media (min-width: 700px) and (max-width: 1000px) {
+            body {
+                background-color: blue;
+                display: block;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            body {
+                background-color: green;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar" class="item">Home About Us Contact Us</div>
+        <div id="section" class="item">
+            <h2>Section</h2>
+            section. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit
+            neque at, corporis quibusdam necessitatibus ipsum nisi nesciunt dicta nulla aut labore omnis, adipisci modi
+            eius consequuntur alias ut expedita laboriosam vel nam fugiat!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore quia eaque natus laudantium id nobis saepe
+            voluptatibus, velit sit qui quas, ipsam cum officiis nihil quae a ipsa accusantium eligendi?
+        </div>
+        <div id="aside" class="item">
+            <h2>Aside</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor
+            sit amet consectetur adipisicing elit. Provident maiores, aspernatur odit facere doloremque, omnis magni
+            delectus praesentium repudiandae exercitationem accusamus temporibus ducimus natus quisquam similique, nobis
+            autem odio enim.
+        </div>
+        <div id="footer" class="item">Copyright @ CodeWithPritam</div>
+    </div>
+</body>
+
+</html>

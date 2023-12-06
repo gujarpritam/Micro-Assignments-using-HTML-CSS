@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height, Width, Border and Background</title>
+    <style>
+        #firstPara{
+height: 100px;
+width: 450px;
+background-color: aqua;
+/* border-width: 5px;
+border-color: blue;
+border-style: dotted; */
+border: blue dotted 5px;
+border-radius: 30px;
+border-bottom-color: black;
+        }
+        #secondPara{
+height: 500px;
+width: 500px;
+/* background-color: rgb(107, 204, 204); */
+border: 5px solid rgb(139, 133, 133);
+background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwxpyQCNrhZmJoI9LR1jt-I-WySjIZgIGi6v6muCIL&s');
+/* image-rendering:calc(100,450); */
+/* background-size: contain; */
+background-repeat: no-repeat;
+background-position: left up;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="firstPara">First Para</p>
+    <p id="secondPara">Second Para</p>
+</body>
+</html>

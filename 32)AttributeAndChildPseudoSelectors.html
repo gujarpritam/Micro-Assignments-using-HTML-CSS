@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute And nth Child Pseudo Selectors</title>
+    <style>
+input[type]{
+    background-color: aqua;
+}
+a[target='_blank']{
+    color: rgb(98, 98, 10);
+}
+li:nth-child(2n+2){
+    color: aqua;
+}
+li:nth-child(odd){
+    background-color: yellow;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form-group">
+            <input type="text" name="" id="">
+            <input type="password" name="" id="">
+            <input type="submit" value="submit">
+            <a href="http://google.com" target="_blank">Google</a>
+        </form>
+        <ul>
+            <li class="item" id="item1">Item 1</li>
+            <li class="item" id="item2">Item 2</li>
+            <li class="item" id="item3">Item 3</li>
+            <li class="item" id="item4">Item 4</li>
+            <li class="item" id="item5">Item 5</li>
+            <li class="item" id="item6">Item 6</li>
+        </ul>
+    </div>
+</body>
+</html>
